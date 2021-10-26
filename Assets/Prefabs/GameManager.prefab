@@ -45,4 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   city_prefab: {fileID: 6712451525425112371, guid: 0555ffc649ca17f42ad94144b3119d2a,
     type: 3}
+  road_prefab: {fileID: 3371264300313637542, guid: 255cfa2072ab9d4439e6bb35c257640a,
+    type: 3}
+  ant_prefab: {fileID: 2857041404213131602, guid: 4957b74e7e062fc47bb9e27279df1f73,
+    type: 3}
   citys: []

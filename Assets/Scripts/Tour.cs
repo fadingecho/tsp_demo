@@ -25,17 +25,18 @@ namespace Assets.Scripts
         }
 
         //计算路径长度
-        public string Calc()
+        public void Calc()
         {
+            if(trace.Count == 0)
+			{
+                coverage = float.PositiveInfinity;
+                return;
+			}
             coverage = 0;
-            string d = "";
             foreach(Vector2Int p in trace) 
             {
-                coverage += GameManager.Instance.dis[p.x, p.y];
-                d += p.x + " " + p.y + ":" + GameManager.Instance.dis[p.x, p.y] + "\n";
+                coverage += GameManager.Instance.roads[p.x, p.y].dis;
             }
-            d = coverage + "\n " + d;
-            return d;
         }
 
         //向部分解中加入一条边
@@ -55,15 +56,7 @@ namespace Assets.Scripts
         {
             return trace[i].y;
         }
-        //void print()
-        //{
-        //    int sz = path.Count;
-        //    for (int i = 0; i < sz; i++)
-        //    {
-        //        Debug.Log(fp, "%d->", path[i].first + 1);
-        //    }
-        //    fprintf(fp, "%d\n", path[sz - 1].second + 1);
-        //}
+      
         public static bool operator< (Tour t1, Tour t2)
         {
             return t1.coverage < t2.coverage;
