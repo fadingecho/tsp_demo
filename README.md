@@ -7,5 +7,4 @@
 * VS2019
 
 ## Animation
-![ant1]](ant_1.gif)
-![ant2]](ant_2.gif)
+just check the gifs
