@@ -17,7 +17,7 @@ namespace Assets.Scripts
 		public Tour tour;
 
 		private GameObject sphere;
-		private static Vector3 sphere_offset = new Vector3(0, 0, 50);
+		private static Vector3 sphere_offset = new Vector3(0, 0, -50);
 		public readonly static float time_per_road = 0.3f;
 
 		private Vector3 velocity = Vector3.zero;
